@@ -14,7 +14,7 @@ mkdir -p $INSTALL_DIR
 cp 4xxbypass.sh $INSTALL_DIR/
 
 # Make the tool script executable
-chmod +x $INSTALL_DIR/4xx-Bypass/4xxbypass.sh
+chmod +x $INSTALL_DIR/4xxbypass.sh
 
 # Add the tool to the system's PATH
 echo "export PATH=$INSTALL_DIR:\$PATH" >> ~/.bashrc
