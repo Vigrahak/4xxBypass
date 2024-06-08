@@ -66,11 +66,11 @@ bar='###########################################################'
 	echo -e "\n${red}==================${green}  401/403 ByPass Scanner ${red}================\n${reset}"
 	sleep 1
         echo ""
-        echo -e "${ltcyan}Usage: ${green}4xxbypass <Domain/Path>"
+        echo -e "${ltcyan}Usage: ${green}4xxbypass.sh <Domain/Path>"
         echo ""
-        echo -e "${ltcyan}Example: ${green}4xxbypass example.com"
-        echo "        4xxbypass http://example.com"
-        echo "       4xxbypass https://example.com"
+        echo -e "${ltcyan}Example: ${green}4xxbypass.sh example.com"
+        echo "        4xxbypass.sh http://example.com"
+        echo "       4xxbypass.sh https://example.com"
   exit 0
 }
 
