@@ -35,11 +35,42 @@ case $code in
 }
 
 help() {
-  echo -e "${ltcyan}Usage: ${green}4xxbypass <Domain/Path>"
-  echo ""
-  echo -e "${ltcyan}Example: ${green}4xxbypass example.com"
-  echo "        4xxbypass http://example.com"
-  echo "       4xxbypass https://example.com"
+  figlet 4xx ByPass
+
+echo -e "                                              ${ltcyan}- By Vigrahak${end}"
+echo -e "${red}Have a beer🍺 : ${ltcyan}https://www.paypal.com/paypalme/SourabhS1828"      
+echo " "
+bar='###########################################################'
+	for i in {1..100}; do
+		if [[ $i > 0 ]]; then
+			color=${red}
+		fi
+		if [[ $i > 15 ]]; then
+			color=${red}
+		fi
+		if [[ $i > 30 ]]; then
+			color=${yellow}
+		fi
+		if [[ $i > 50 ]]; then
+			color=${green}
+		fi
+		if [[ $i > 75 ]]; then
+			color=${green}
+		fi
+	    echo -ne "${color}${bar:0:$i}\r"
+	    sleep .02
+	done
+	
+	echo -ne "${green}# Attacking targets without mutual consent is illegal! ####${reset}\n"
+	sleep 1
+	echo -e "\n${red}==================${green}  401/403 ByPass Scanner ${red}================\n${reset}"
+	sleep 1
+        echo ""
+        echo -e "${ltcyan}Usage: ${green}4xxbypass <Domain/Path>"
+        echo ""
+        echo -e "${ltcyan}Example: ${green}4xxbypass example.com"
+        echo "        4xxbypass http://example.com"
+        echo "       4xxbypass https://example.com"
   exit 0
 }
 
