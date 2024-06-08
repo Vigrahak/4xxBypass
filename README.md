@@ -8,8 +8,11 @@ This script appears to contain various techniques aimed at bypassing 401 and 403
  * sudo bash ./install.sh
 
 # Guide
-Usage: 4xxbypass <Domain/Path>
+Usage:    4xxbypass <Domain/Path>
                                                                                                                                                                           
-Example: 4xxbypass example.com                                                                                                                                            
-        4xxbypass http://example.com                                                                                                                                      
-       4xxbypass https://example.com 
+Example: 
+ * 4xxbypass example.com
+ * 4xxbypass http://example.com
+ * 4xxbypass https://example.com 
+                                                                                                                                              
+         
