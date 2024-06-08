@@ -8,11 +8,13 @@ This script appears to contain various techniques aimed at bypassing 401 and 403
  * sudo bash ./install.sh
 
 # Guide
-Usage:    4xxbypass <Domain/Path>
+Usage:    4xxbypass.sh <Domain/Path>
                                                                                                                                                                           
 Example: 
- * 4xxbypass example.com
- * 4xxbypass http://example.com
- * 4xxbypass https://example.com 
+ * 4xxbypass.sh example.com
+ * 4xxbypass.sh http://example.com
+ * 4xxbypass.sh https://example.com
+
+Note:  If you see multiple [200 Ok]/bypasses as output, you must check the Content-Length. If the Content-Length is the same for multiple [200 Ok]/bypasses, it means a false positive. The reason can be a "301/302" redirect or a "../" payload.
                                                                                                                                               
          
