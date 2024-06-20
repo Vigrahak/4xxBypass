@@ -76,10 +76,10 @@ bar='###########################################################'
 update() {
 
   echo -e "${green}Updating 4xx ByPass Scanner...${end}"
-  git clone https://github.com/Vigrahak/4xxBypas.git /tmp/4xxBypas
-  cd /tmp/4xxBypas
-  bash install.sh
-  rm -rf /tmp/4xxBypas
+  git clone https://github.com/Vigrahak/4xxBypas.git
+  cd 4xxBypas
+  sudo bash ./install.sh
+  rm -rf 4xxBypas
   echo -e "${green}Update successful!${end}"
 }
 
