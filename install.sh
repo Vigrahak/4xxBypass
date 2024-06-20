@@ -11,9 +11,6 @@ INSTALL_DIR=/usr/local/bin
 # Create the installation directory if it doesn't exist
 mkdir -p $INSTALL_DIR
 
-# Download the latest version of 4xxBypass.sh
-curl -o $INSTALL_DIR/4xxbypass.sh https://raw.githubusercontent.com/Vigrahak/4xxBypas/main/4xxbypass.sh
-
 # Make the tool script executable
 chmod +x $INSTALL_DIR/4xxbypass.sh
 
