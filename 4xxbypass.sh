@@ -76,6 +76,12 @@ bar='###########################################################'
 if [ $# -eq 0 ]; then
 help
 fi
+while getopts ":h" opt; do
+  case $opt in
+    h) help ;;
+    \?) echo "Invalid option: -$OPTARG"; exit 1 ;;
+  esac
+done
 
 update() {
 
@@ -92,9 +98,8 @@ if [ $# -eq 0 ]; then
 help
 fi
 
-while getopts ":h:u" opt; do
+while getopts ":u" opt; do
   case $opt in
-    h) help ;;
     u) update ;;
     \?) echo "Invalid option: -$OPTARG"; exit 1 ;;
   esac
