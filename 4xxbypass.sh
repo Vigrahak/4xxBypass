@@ -2,143 +2,262 @@
 
 
 # color variables
+
 red='\e[31m'
+
 green='\e[32m'
+
 blue='\e[34m'
+
 ltcyan='\e[96m'
+
 yellow='\e[33m'
+
 end='\e[0m'
+
 
 print_result() {
 
   local code=$1
+
   local size=$2
 
-case $code in
+
+  case $code in
+
     2*)
+
       color=$green
+
       ;;
+
     3*)
+
       color=$ltcyan
+
       ;;
+
     4*)
+
       color=$yellow
+
       ;;
+
     5*)
+
       color=$red
+
       ;;
+
     *)
+
       color=$blue
+
       ;;
+
   esac
+
   echo -en "  ${blue}Status: ${end}${color}$code$end - ${blue}Size: ${color}$size${end} "
+
 }
+
 
 help() {
+
   figlet 4xx ByPass
 
-echo -e "                                              ${ltcyan}- By Vigrahak${end}"
-echo -e "${red}Have a beer🍺 : ${ltcyan}https://www.paypal.com/paypalme/SourabhS1828"      
-echo " "
-bar='###########################################################'
-	for i in {1..100}; do
-		if [[ $i > 0 ]]; then
-			color=${red}
-		fi
-		if [[ $i > 15 ]]; then
-			color=${red}
-		fi
-		if [[ $i > 30 ]]; then
-			color=${yellow}
-		fi
-		if [[ $i > 50 ]]; then
-			color=${green}
-		fi
-		if [[ $i > 75 ]]; then
-			color=${green}
-		fi
-	    echo -ne "${color}${bar:0:$i}\r"
-	    sleep .02
-	done
-	
-	echo -ne "${green}# Attacking targets without mutual consent is illegal! ####${reset}\n"
-	sleep 1
-	echo -e "\n${red}==================${green}  401/403 ByPass Scanner ${red}================\n${reset}"
-	sleep 1
-        echo ""
-        echo -e "${ltcyan}Usage: ${green}4xxbypass.sh <Domain/Path>"
-        echo ""
-        echo -e "${ltcyan}Example: ${green}4xxbypass.sh example.com"
-        echo "        4xxbypass.sh http://example.com"
-        echo "       4xxbypass.sh https://example.com"
+
+  echo -e "                                              ${ltcyan}- By Vigrahak${end}"
+
+  echo -e "${red}Have a beer🍺 : ${ltcyan}https://www.paypal.com/paypalme/SourabhS1828"      
+
+  echo " "
+
+  bar='###########################################################'
+
+  for i in {1..100}; do
+
+    if [[ $i > 0 ]]; then
+
+      color=${red}
+
+    fi
+
+    if [[ $i > 15 ]]; then
+
+      color=${red}
+
+    fi
+
+    if [[ $i > 30 ]]; then
+
+      color=${yellow}
+
+    fi
+
+    if [[ $i > 50 ]]; then
+
+      color=${green}
+
+    fi
+
+    if [[ $i > 75 ]]; then
+
+      color=${green}
+
+    fi
+
+    echo -ne "${color}${bar:0:$i}\r"
+
+    sleep .02
+
+  done
+
+  
+
+  echo -ne "${green}# Attacking targets without mutual consent is illegal! ####${reset}\n"
+
+  sleep 1
+
+  echo -e "\n${red}==================${green}  401/403 ByPass Scanner ${red}================\n${reset}"
+
+  sleep 1
+
+  echo ""
+
+  echo -e "${ltcyan}Usage: ${green}4xxbypass.sh <Domain/Path>"
+
+  echo ""
+
+  echo -e "${ltcyan}Example: ${green}4xxbypass.sh example.com"
+
+  echo "        4xxbypass.sh http://example.com"
+
+  echo "       4xxbypass.sh https://example.com"
+
   exit 0
+
 }
+
+
 if [ $# -eq 0 ]; then
-help
+
+  help
+
 fi
+
+
 while getopts ":h" opt; do
+
   case $opt in
+
     h) help ;;
+
     \?) echo "Invalid option: -$OPTARG"; exit 1 ;;
+
   esac
+
 done
+
 
 update() {
 
   echo -e "${green}Updating 4xx ByPass Scanner...${end}"
+
   git clone https://github.com/Vigrahak/4xxBypas.git
+
   cd 4xxBypas
+
   sudo bash ./install.sh
+
   rm -rf 4xxBypas
+
   echo -e "${green}Update successful!${end}"
+
   exit 0
+
 }
-  
+
+
 if [ $# -eq 0 ]; then
-help
+
+  help
+
 fi
 
+
 while getopts ":u" opt; do
+
   case $opt in
+
     u) update ;;
+
     \?) echo "Invalid option: -$OPTARG"; exit 1 ;;
+
   esac
+
 done
+
 
 shift $((OPTIND-1))
 
+
 figlet 4xx ByPass
 
+
 echo -e "                                              ${ltcyan}- By Vigrahak${end}"
+
 echo -e "${red}Have a beer🍺 : ${ltcyan}https://www.paypal.com/paypalme/SourabhS1828"
 
-        
-        echo " "
+
 bar='###########################################################'
-	for i in {1..100}; do
-		if [[ $i > 0 ]]; then
-			color=${red}
-		fi
-		if [[ $i > 15 ]]; then
-			color=${red}
-		fi
-		if [[ $i > 30 ]]; then
-			color=${yellow}
-		fi
-		if [[ $i > 50 ]]; then
-			color=${green}
-		fi
-		if [[ $i > 75 ]]; then
-			color=${green}
-		fi
-	    echo -ne "${color}${bar:0:$i}\r"
-	    sleep .02
-	done
-	
-	echo -ne "${green}# Attacking targets without mutual consent is illegal! ####${reset}\n"
-	sleep 1
-	echo -e "\n${red}==================${green}  401/403 ByPass Scanner ${red}================\n${reset}"
-	sleep 1
+
+for i in {1..100}; do
+
+  if [[ $i > 0 ]]; then
+
+    color=${red}
+
+  fi
+
+  if [[ $i > 15 ]]; then
+
+    color=${red}
+
+  fi
+
+  if [[ $i > 30 ]]; then
+
+    color=${yellow}
+
+  fi
+
+  if [[ $i > 50 ]]; then
+
+    color=${green}
+
+  fi
+
+  if [[ $i > 75 ]]; then
+
+    color=${green}
+
+  fi
+
+  echo -ne "${color}${bar:0:$i}\r"
+
+  sleep .02
+
+done
+
+
+echo -ne "${green}# Attacking targets without mutual consent is illegal! ####${reset}\n"
+
+sleep 1
+
+echo -e "\n${red}==================${green}  401/403 ByPass Scanner ${red}================\n${reset}"
+
+sleep 1
 
         echo -e ${red}"----------------------"${end}
 	echo -e ${ltcyan}"[+] HTTP Method Bypass"${end}
