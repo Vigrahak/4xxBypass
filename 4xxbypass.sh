@@ -73,14 +73,24 @@ bar='###########################################################'
         echo "       4xxbypass.sh https://example.com"
   exit 0
 }
+update() {
+
+  echo -e "${green}Updating 4xx ByPass Scanner...${end}"
+  git clone https://github.com/Vigrahak/4xxBypas.git /tmp/4xxBypas
+  cd /tmp/4xxBypas
+  bash install.sh
+  rm -rf /tmp/4xxBypas
+  echo -e "${green}Update successful!${end}"
+}
 
 if [ $# -eq 0 ]; then
 help
 fi
 
-while getopts ":h" opt; do
+while getopts ":h:u" opt; do
   case $opt in
     h) help ;;
+    u) update ;;
     \?) echo "Invalid option: -$OPTARG"; exit 1 ;;
   esac
 done
