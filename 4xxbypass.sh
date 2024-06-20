@@ -160,56 +160,6 @@ while getopts ":h" opt; do
 done
 
 
-update() {
-
-  echo -e "${green}Updating 4xx ByPass Scanner...${end}"
-
-  git clone https://github.com/Vigrahak/4xxBypas.git
-
-  cd 4xxBypas
-
-  sudo bash ./install.sh
-
-  rm -rf 4xxBypas
-
-  echo -e "${green}Update successful!${end}"
-
-  exit 0
-
-}
-
-
-if [ $# -eq 0 ]; then
-
-  help
-
-fi
-
-while getopts ":u" opt; do
-
-  case $opt in
-
-    u)
-
-      update
-
-      shift $((OPTIND-1))
-
-      figlet 4xx ByPass
-
-      echo -e "                                              ${ltcyan}- By Vigrahak${end}"
-
-      echo -e "${red}Have a beer🍺 : ${ltcyan}https://www.paypal.com/paypalme/SourabhS1828"
-
-      ;;
-
-    \?) echo "Invalid option: -$OPTARG"; exit 1 ;;
-
-  esac
-
-done	
-
-
 shift $((OPTIND-1))
 
 
