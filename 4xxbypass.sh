@@ -72,6 +72,11 @@ bar='###########################################################'
         echo "        4xxbypass.sh http://example.com"
         echo "       4xxbypass.sh https://example.com"
   exit 0
+  
+if [ $# -eq 0 ]; then
+help
+fi
+
 }
 update() {
 
@@ -82,10 +87,6 @@ update() {
   rm -rf 4xxBypas
   echo -e "${green}Update successful!${end}"
 }
-
-if [ $# -eq 0 ]; then
-help
-fi
 
 while getopts ":h:u" opt; do
   case $opt in
